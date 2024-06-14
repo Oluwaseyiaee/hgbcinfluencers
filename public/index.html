@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <title>Home | HGBC Influencers</title>
+
+     <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  <!---- Jquery -->
+
+  <!-- Packages -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <!---- Animation on scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/> <!---- Slick Carousel -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" /> <!---- Boxicon -->
+  <!-- JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> <!---- Slick Carousel -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!---- Animation on scroll -->
+
+</head>
+<body>
+
+<style>
+
+.showcase{
+  background-image: url(img/showcase.jpg);
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+  @keyframes animate{
+    0%{
+      background-image:url(img/showcase.jpg);
+    }
+    20%{
+      background-image:url(img/showcase1.jpg);
+    }
+    40%{
+      background-image:url(img/showcase2.jpg);
+    }
+    60%{
+      background-image:url(img/showcase3.jpg);
+    }
+    80%{
+      background-image:url(img/showcase.jpg);
+    }
+    100%{
+      background-image:url(img/footer.jpg);
+    }
+
+  }
+</style>
+
+<!-- <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slidingContent = document.getElementById('hero-content');
+    const showcase = document.getElementsByClassName('showcase'); // Access the first element
+    const interval = 5000;
+    let index = 0;
+    var images = ['url(img/showcase.jpg)', 'url(img/showcase1.jpg)', 'url(img/showcase2.jpg)', 'url(img/showcase3.jpg)'];
+
+
+    function changeContent() {
+        switch (index) {
+            case 0:
+                slidingContent.innerHTML = `
+                    <h1 class="text-8xl"> HGBC <br> Influencers</h1>
+                    <p class="text-xl md:w-1/2 w-full mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sequi non dolorum, corporis nihil maiores, magnam quas autem consequatur perspiciatis optio dicta temporibus ducimus quibusdam. Maxime inventore facere atque aliquid.</p>`;
+                break;
+            case 1:
+                slidingContent.innerHTML = `
+                    <h1 class="text-8xl"> HGBC <br> Secretariat</h1>
+                    <p class="text-xl md:w-1/2 w-full mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sequi non dolorum, corporis nihil maiores, magnam quas autem consequatur perspiciatis optio dicta temporibus ducimus quibusdam. Maxime inventore facere atque aliquid.</p>`;
+                break;
+            case 2:
+                slidingContent.innerHTML = `
+                    <h1 class="text-8xl"> HGBC <br> Choir</h1>
+                    <p class="text-xl md:w-1/2 w-full mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sequi non dolorum, corporis nihil maiores, magnam quas autem consequatur perspiciatis optio dicta temporibus ducimus quibusdam. Maxime inventore facere atque aliquid.</p>`;
+                break;
+            case 3:
+                slidingContent.innerHTML = `
+                    <h1 class="text-8xl"> HGBC <br> Media</h1>
+                    <p class="text-xl md:w-1/2 w-full mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sequi non dolorum, corporis nihil maiores, magnam quas autem consequatur perspiciatis optio dicta temporibus ducimus quibusdam. Maxime inventore facere atque aliquid.</p>`;
+                break;
+        }
+        // Change background image
+        showcase.style.backgroundImage = images[index];
+        
+        index = (index + 1) % 4;
+    }
+
+    // Call the function initially
+    changeContent();
+
+    // Call the function at intervals
+    setInterval(changeContent, interval);
+});
+
+
+</script> -->
+
+
+<section class="showcase h-2/3 bg-gradient-to-b bg-cover bg-center transition duration-500">
+  <div class="backdrop-brightness-50">
+        <!-- Navbar -->
+    <nav class="nav-section">
+        <div class="container md:flex md:items-center md:justify-between">
+          <!-- logo & menu icon -->
+          <div class="flex items-center justify-between">
+            <a href="index.html">
+              <img src="img/logo.png" alt="Data Minds" class="w-20 cursor-pointer" />
+            </a>
+            <div class="flex text-white w-fit rounded-full md:hidden cursor-pointer hover:bg-primary-100 justify-center items-center">
+                <i class="menu bx bx-menu text-center text-3xl p-2"  id="menuButton"></i>
+            </div>
+          </div>
+
+          <!-- Navigation links -->
+          <ul
+            class="p-5 z-10 absolute text-white bg-primary-100 md:bg-transparent md:bg-none w-full h-full left-0 opacity-0 right-[-400px] transition-all ease-in duration-200 md:p-0 md:flex md:items-center md:space-x-8 md:sticky md:w-auto md:opacity-100 border-r-2 md:border-0">
+            <li class="nav my-6 active-nav">
+              <a href class="text-lg">Home</a>
+            </li>
+            <li class="nav">
+              <a href="about.html" class="text-lg">About Us</a>
+            </li>
+            <li class="nav ">
+              <a href="sermon.html" class="text-lg">Sermon</a>
+            </li>
+            <li class="nav">
+              <a href="builders-force.html" class="text-lg">The Builders Force</a>
+            </li> 
+            <li class="nav">
+                <a href="builders-academy.html " class="text-lg">Builders Academy</a>
+              </li>
+              <li class="nav">
+                <a href="contact.html" class="text-lg">Contact Us</a>
+              </li>
+              <li class="nav">
+                <a href class="text-lg">News</a>
+              </li>
+
+          </ul>
+      </nav>
+
+      <!-- Showcase -->
+      <div class="px-16 pb-20 md:px-36 mt-28 text-white">
+        <div id="sliding-content">
+            <h1 class="text-8xl"> HGBC <br> Influencers</h1>
+            <p class="text-xl md:w-1/2 w-full mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sequi non dolorum, corporis nihil maiores, magnam quas autem consequatur perspiciatis optio dicta temporibus ducimus quibusdam. Maxime inventore facere atque aliquid.</p>
+            <a href="" target="_blank">
+                <button type="button" class="px-4 py-3 mt-5 cursor-pointer font-bold bg-primary-100 rounded-md hover:bg-transparent hover:border-white hover:text-white hover:border-2 transition-all duration-150">Know More</button>
+            </a>
+        </div> 
+      </div>
+
+  </div>
+   
+
+</section>
+
+
+<!-- Core Values, Mission & Vision -->
+<div class="px-16 md:px-36 mb-20 mt-24 md:mt-5">
+    <div class="text-center md:pt-7 pt-2">
+      <h1 class="title-heading">
+        What Keeps us Standing? 
+      </h1>
+      <p class="mt-4 text-title font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus consequatur ea temporibus dolores animi recusandae.</p>
+    </div>
+
+    <div class="md:flex mt-20 justify-between">
+        <!-- Core Values -->
+        <div class="block" data-aos="fade-right" data-aos-duration="1000">
+            <h3 class="headings">OUR CORE VALUES</h3>
+            <h3 class="font-bold text-5xl text-primary-100 mt-10 tracking-widest text-center">CHELI</h3>
+            <div class="flex flex-wrap pt-5 mt-10 gap-x-5 gap-y-6 justify-center items-center">
+               <span class="values">Committment</span>
+               <span class="values">Holiness</span>
+               <span class="values">Excellence</span>
+               <span class="values">Love</span>
+               <span class="values" >Integrity</span>
+
+            </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="block md:w-2/3 md:ml-20 mt-16 md:items-center" data-aos="fade-left" data-aos-duration="1000">
+            <!-- Vision -->
+            <div>
+                <h3 class="headings">OUR VISION</h3>
+                <p class="pt-5 text-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi exercitationem, possimus ex repellendus accusantium excepturi doloremque eius ipsam impedit, nesciunt quis officiis est libero consequuntur, voluptatem pariatur tenetur dolores! Suscipit!</p>
+            </div>
+            <!-- Mission -->
+            <div>
+                <h3 class="headings mt-14 md:mt-10">OUR MISSION</h3>
+                <p class="pt-5 text-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi exercitationem, possimus ex repellendus accusantium excepturi doloremque eius ipsam impedit, nesciunt quis officiis est libero consequuntur, voluptatem pariatur tenetur dolores! Suscipit!</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Latest Sermon -->
+
+<section class="px-16 md:px-36 mb-20">
+    <div class="title">
+        <h1 class="title-heading">
+          Latest Sermons 
+        </h1>
+        <p class="mt-4 text-title font-semibold">Convinced of this, I know that I will remain and continue with you all, for your progress and joy in the faith</p>
+      </div>
+
+      <div class="md:flex md:justify-between  mt-20 md:gap-5">
+          <a href="" target="_blank" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/sermon/s-1.jpg" class="w-auto md:pt-0">
+        </a>
+        
+        <a href="" target="_blank" data-aos="fade-up" data-aos-duration="1200">
+            <img src="img/sermon/s-2.jpg" class="w-auto  mt-5 md:mt-0">
+        </a>
+        <a href="" target="_blank" data-aos="fade-up" data-aos-duration="1400">
+            <img src="img/sermon/s-3.jpg" class="w-auto  mt-5 md:mt-0">
+        </a>
+        <a href="" target="_blank" data-aos="fade-up" data-aos-duration="1600">
+          <img src="img/sermon/s-3.jpg" class="w-auto  mt-5 md:mt-0">
+      </a>
+      </div>
+
+</section>
+
+<!-- Upcoming Events -->
+<section  class="px-16 md:px-36 bg-small">
+  <div class="title">
+    <h1 class="title-heading">
+      Upcoming Events
+    </h1>
+    <p class="mt-4 text-title font-semibold">Stay up to date with our programs and events.</p>
+  </div>
+
+  <div class="md:flex md:justify-between  mt-20 md:items-center ">
+      <div class="flex w-full md:grid md:grid-cols-2 md:w-2/3 gap-x-5 mb-20" data-aos="fade-right" data-aos-duration="1000">
+        <div class="">
+          <img src="img/event/photizo.jpg" class="w-auto rounded-xl">
+
+        </div>
+        <div class="mt-16">
+          <img src="img/event/thanksgiving.jpg"class="w-auto rounded-xl">
+        </div>    
+      </div>
+
+      <div class="block md:ml-16" data-aos="fade-left" data-aos-duration="1000">
+        <h3 class="text-xl md:text-2xl font-bold mb-6">Make your calendars for these great events coming up</h3>
+        <!-- Event 1 -->
+        <div class="flex justify-between">
+          <div class="event-box">
+            <span class="text-white text-center block">
+              <p class="text-lg font-semibold"> APR</p> 
+              <p class="text-3xl font-bold">10</p>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="flex justify-between mt-8">
+          <div class="event-box">
+            <span class="text-white text-center block">
+              <p class="text-lg font-semibold"> APR</p> 
+              <p class="text-3xl font-bold">10</p>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="flex justify-between mt-8 pb-20 md:pb-0">
+          <div class="event-box">
+            <span class="text-white text-center block">
+              <p class="text-lg font-semibold"> APR</p> 
+              <p class="text-3xl font-bold">10</p>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+
+<section class="px-16 md:px-36 mb-20 bg-small">
+  <div class="title">
+    <h1 class="title-heading">
+      Let's Hear From You
+    </h1>
+    <p class="mt-4 text-title font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia beatae, vero asperiores aliquid sapiente!</p>
+  </div>
+
+  <div class="md:flex py-20" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="md:w-1/3 md:items-center">
+      <img src="img/event/photizo.jpg" class="mx-auto rounded-xl">
+    </div>
+    <form class="md:w-1/2 md:ml-20 mt-10 md:mt-0">
+      <div class="space-y-12">
+
+          <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+              <div class="mt-2">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-200 placeholder:text-primary-200 focus:ring-2 focus:ring-inset focus:ring-primary-100 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-3">
+              <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+              <div class="mt-2">
+                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-200 placeholder:text-primary-200 focus:ring-2 focus:ring-inset focus:ring-primary-100 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-200 placeholder:text-primary-200 focus:ring-2 focus:ring-inset focus:ring-primary-100 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+            <div class="sm:col-span-full">
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Subject</label>
+              <div class="mt-2">
+                <input id="subject" name="subject" type="text"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-200 placeholder:textprimary-2000 focus:ring-2 focus:ring-inset focus:ring-primary-100 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+
+            <div class="col-span-full">
+              <label for="about" class="block text-sm font-medium leading-6 text-gray-900">About</label>
+              <div class="mt-2">
+                <textarea id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-200 placeholder:text-primary-200 focus:ring-2 focus:ring-inset focus:ring-primary-100 sm:text-sm sm:leading-6"></textarea>
+              </div>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Let us know what you have for us</p>
+            </div>
+
+            <div class="justify-start mt-6 flex items-center  gap-x-6">
+              <button type="button" class="text-sm font-semibold rounded-md leading-6 px-3 py-2  border-2 border-primary-200 text-gray-900">Cancel</button>
+              <button type="submit" class="rounded-md bg-primary-100 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-100">Submit</button>
+            </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Word of the day -->
+<section class="px-16 md:px-36 mb-20">
+  <div class="title">
+    <h1 class="title-heading">Word of the Day</h1>
+    <p class="mt-4 text-title font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia beatae, vero asperiores aliquid sapiente!</p>
+  </div>
+
+    <div class="quote md:flex md:justify-between  py-10" data-aos="zoom-in-up" data-aos-duration="1000">
+      <div class="word-box">
+          <a href="" target="_blank" class="">
+              <img src="img/quote//q-1.jpg" class="w-auto md:p-10 ">
+          </a>
+      </div>
+     
+      <div class="word-box">
+        <a href="" target="_blank" class="hover:scale-125 transition duration-500">
+            <img src="img/quote//q-2.jpg" class="w-auto md:p-10 ">
+        </a>
+    </div>
+    <div class="word-box">
+      <a href="" target="_blank" class="">
+          <img src="img/quote//q-3.jpg" class="w-auto md:p-10 ">
+      </a>
+  </div>
+  <div class="word-box">
+    <a href="" target="_blank" class="">
+        <img src="img/quote//q-3.jpg" class="w-auto md:p-10 ">
+    </a>
+</div>
+<div class="word-box">
+  <a href="" target="_blank" class="">
+      <img src="img/quote//q-3.jpg" class="w-auto md:p-10 ">
+  </a>
+</div>
+<div class="word-box">
+  <a href="" target="_blank" class="">
+      <img src="img/quote//q-3.jpg" class="w-auto md:p-10 ">
+  </a>
+</div>
+    </div>
+    
+</section>
+
+
+<!-- Location -->
+
+<section class="px-16 md:px-36 mb-20 ">
+  <div class="title">
+    <h1 class="title-heading">
+      Find us Here
+    </h1>
+    <p class="mt-4 text-title font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia beatae, vero asperiores aliquid sapiente!</p>
+  </div>
+  <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000">
+    <div class="py-20 overflow-hidden rounded-lg">
+        <iframe class="overflow-hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.7226045527757!2d4.264685797732026!3d8.164173505962271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10370da637004d75%3A0xcba433a8c5a10ad5!2sHigher%20Ground%20Baptist%20Church!5e0!3m2!1sen!2sng!4v1708510731262!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+      <div class="block md:ml-16">
+        <h3 class="text-xl md:text-2xl font-bold mb-6">We're too small to reach you but big enough to accommodate you</h3>
+       
+        <!-- Event 1 -->
+        <div class="location">
+          <div class="location-box">
+            <span class="text-white text-center block">
+              <i class='bx bx-current-location text-xl text-white'></i>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="location">
+          <div class="location-box">
+            <span class="text-white text-center block">
+              <i class='bx bx-current-location text-xl text-white'></i>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="location">
+          <div class="location-box">
+            <span class="text-white text-center block">
+              <i class='bx bx-current-location text-xl text-white'></i>
+            </span>
+          </div>
+          <div class="block clear-start mx-5">
+              <h3 class="event-heading">PHOTIZO</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse laborum quis dolorem tenetur! Cupiditate.</P>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</section>
+
+
+<!-- Footer -->
+
+<footer class="bg-my-footer h-2/3  bg-cover bg-center items-center justify-center text-white">
+  <div class="backdrop-brightness-50 px-16">
+  <div class="mx-auto py-16 block text-center md:w-[800px]" data-aos="zoom-in-up" data-aos-duration="1000">
+      <div class="items-center justify-center">
+        
+        <div class="text-center">
+            <a href="index.html">
+              <img src="img/logo.png" alt="Data Minds" class="w-24 cursor-pointer mx-auto" />
+            </a>
+              <h1 class="font-bold text-3xl">HIGHER GROUND BAPTIST CHURCH</h1>
+              <p class="mt italic text-lg">...Bulding men of Influence</p>
+          </div>
+
+          <div class="mt-10 text-center">
+            <span class="font-bold text-xl">OUR WATCHWORD</span>
+            <ul class="mt-4">
+             <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis quibusdam perferendis omnis quaerat nulla doloremque quam natus consectetur, illo voluptas quod iusto nam voluptatem facere veritatis ducimus quis officiis!</P>
+            </ul>
+        </div>
+
+
+          <div class="mt-10 ">
+              <span class="font-bold text-xl">QUICK LINKS</span>
+              <ul class="mt-4 flex flex-wrap text-center justify-center">
+                <li class="footer-link">
+                  <i class='bx bx-radio-circle mr-1 text-3xl'></i> <a href="index.html">Home</a>
+                </li>
+                <li class="footer-link">
+                   <i class='bx bx-radio-circle mr-1 text-3xl'></i><a href="about.html">About Us</a>
+                </li>
+                <li class="footer-link">
+                   <i class='bx bx-radio-circle mr-1 text-3xl'></i><a href="sermon.html">Sermon</a>
+                </li>
+                <li class="footer-link">
+                   <i class='bx bx-radio-circle mr-1 text-3xl'></i><a href="builders-force.html">The Builders Force</a>
+                </li>
+                <li class="footer-link">
+                    <i class='bx bx-radio-circle mr-1 text-3xl'></i> <a href="builders-academy.html">Builders Academy</a>
+                  </li>
+                  <li class="footer-link">
+                    <i class='bx bx-radio-circle mr-1 text-3xl'></i> <a href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="footer-link">
+                    <i class='bx bx-radio-circle mr-1 text-3xl'></i> <a href class="">News</a>
+                  </li>
+
+              </ul>
+            </div> 
+      </div>
+  </div>
+
+  <hr>
+    <div class="md:flex md:items-center md:justify-between">
+      <ul class="flex md:mb-10 mt-5 gap-x-5 items-center">
+        <li class="social"><a href="https://x.com/hgbcinfluencers" target="_blank"><img src="img/twitter.png" alt="Twitter" class="w-6"></a></li>
+        <li class="social"><a href="https://facebook.com/hgbcinfluencers" target="_blank"><i class="bx bxl-facebook social-i"></i></a></li>
+        <li class="social"><a href="https://instagram.com/hgbcinfluencers" target="_blank"><i class="bx bxl-youtube social-i" ></i></a></li>
+        <li class="social"><a href="https://youtube.com/@hgbcinfluencers" target="_blank"><i class="bx bxl-instagram social-i" ></i></a></li>
+      </ul>
+
+      <p class="py-6 md:mb-10">© All right reserved 2024 <b>Higher Ground Baptist Church</b></p>
+      </div>
+  </div>
+ 
+</footer>
+
+    <!-- Swipe up icon -->
+    <div class="relative z-40 ">
+      <div id="moveUp"
+          class="fixed right-10 bottom-10 p-3 rounded-full w-12 h-12 bg-primary-200 animate-bounce cursor-pointer shadow-md shadow-primary-100">
+          <i class='bx bxs-up-arrow text-white text-2xl items-center justify-center'></i>
+      </div>
+    </div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html> 
