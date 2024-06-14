@@ -1,0 +1,14 @@
+{
+  "name": "hgbcinfluencers",
+  "version": "1.0.0",
+  "description": "Church Website - February 2024",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/main.css -o ./public/styles.css"
+  },
+  "author": "HGBC Website Team",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

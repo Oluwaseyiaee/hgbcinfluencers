@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Homepage */
+.nav-section{
+   @apply bg-transparent px-16 pt-3 md:px-36 py-5 flex justify-normal md:justify-between;
+}
+.nav-section_scroll{
+   @apply bg-primary-100 w-full fixed;
+}
+.nav_scroll {
+   @apply hover:bg-white;
+}
+.nav_scroll_effect{
+   @apply hover:text-primary-100;
+}
+
+.nav{
+   @apply mx-4 md:my-0 cursor-pointer p-2 mt-5 md:mt-0 hover:bg-white hover:text-primary-100 md:hover:text-white md:hover:bg-primary-100  rounded-lg hover:p-2 transition-all duration-150;
+
+}
+.active-nav{
+   @apply md:bg-primary-100 rounded-lg;
+}
+ .title{
+    @apply text-center pt-7;
+ }
+
+.title-heading{
+   @apply text-4xl md:text-6xl font-bold text-primary-100;
+}
+
+ .headings{
+    @apply text-2xl md:text-4xl text-center font-semibold;
+ }
+
+ .values{
+    @apply px-4 py-4 mx-5 cursor-pointer bg-primary-200 text-white hover:scale-110  text-2xl text-center rounded-md transition-all duration-300;
+ }
+
+.footer-link{
+   @apply cursor-pointer mx-5 hover:text-primary-100 transition-all duration-100 inline-flex items-center;
+}
+
+.location{
+   @apply flex justify-between mt-8;
+}
+
+.event-box{
+   @apply bg-primary-100 p-5 w-20 h-20 rounded-full flex justify-center items-center;
+}
+.event-heading{
+   @apply font-semibold mb-2 text-primary-100;
+}
+.location-box{
+   @apply bg-primary-100 p-5 w-14 h-14 rounded-full flex justify-center items-center;
+}
+.word-box{
+   @apply hover:scale-95 transition duration-500;
+}
+
+ .social{
+   @apply cursor-pointer my-3 bg-white w-12 h-12 rounded-full text-primary-100 flex justify-center items-center transform transition-all hover:translate-y-[-10px] duration-200 delay-100;
+ }
+
+ .social-i{
+   @apply text-4xl w-8;
+ }
+
+
+ /* DISCIPLESHIP PAGE */
+ .discipleship {
+   @apply max-w-sm block md:p-3 px-3 py-2 mb-2 mt-10 bg-white border-2 rounded-lg cursor-pointer hover:shadow-md hover:shadow-orange-500;
+ }
+
+ .discipleship-btn{
+    @apply inline-flex items-center my-5 px-3 py-2 text-sm font-medium text-center text-white bg-primary-100 rounded-lg hover:bg-primary-200;
+ }
+
+
+
+ /* SERMON PAGE */
+ 
+ .data-tip{
+   @apply relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:-top-3 before:w-max before:max-w-xs before:-translate-x-1/2 before:-translate-y-full before:bg-primary-100 before:text-white before:rounded-md before:opacity-0 before:transition-all after:absolute after:left-1/2 after:-top-3 after:h-0 after:w-0 after:-translate-x-1/2 after:border-8 after:border-t-gray-700 after:border-l-transparent after:border-b-transparent after:border-r-transparent after:opacity-0 after:transition-all hover:before:opacity-100 hover:after:opacity-100;
+ } 
+
+ .select-previous-page{
+   @apply items-center  justify-center px-4 h-10 ms-0 leading-tight text-white border border-e-0 border-orange-100 hover:bg-orange-300 hover:text-white bg-primary-100;
+ }
+ .select-next-page{
+   @apply  items-center justify-center px-4 h-10 ms-0 leading-tight text-white border border-e-0 border-orange-100 hover:bg-orange-300 hover:text-white bg-primary-100;
+ }
+ .select-page-number{
+   @apply flex items-center justify-center px-4 h-10 leading-tight text-white border border-orange-100 hover:bg-primary-200  hover:text-white bg-primary-100;
+ }
+ .current-page{
+   @apply flex items-center justify-center px-4 h-10 leading-tight text-white border border-orange-100  bg-primary-300 hover:bg-primary-300;
+ }
